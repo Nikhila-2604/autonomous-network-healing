@@ -1,0 +1,10 @@
+
+<autonomous-network xmlns="urn:autonomous-network">
+    <device-name>router1</device-name>
+    <management-ip>172.18.0.2</management-ip>
+    <interfaces>
+        <name>eth0</name>
+        <admin-status>up</admin-status>
+        <operational-status>up</operational-status>
+    </interfaces>
+</autonomous-network>

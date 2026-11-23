@@ -1,0 +1,49 @@
+
+module autonomous-network {
+  yang-version 1.1;
+
+  namespace "urn:autonomous-network";
+  prefix an;
+
+  organization
+    "Autonomous Network Healing Platform";
+
+  description
+    "Custom YANG model for network device configuration.";
+
+  revision 2026-10-30 {
+    description "Initial version";
+  }
+
+  container autonomous-network {
+    leaf device-name {
+      type string;
+    }
+
+    leaf management-ip {
+      type string;
+    }
+
+    list interfaces {
+      key "name";
+
+      leaf name {
+        type string;
+      }
+
+      leaf admin-status {
+        type enumeration {
+          enum up;
+          enum down;
+        }
+      }
+
+      leaf operational-status {
+        type enumeration {
+          enum up;
+          enum down;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<nacm xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-acm">
+  <enable-nacm>true</enable-nacm>
+  <read-default>permit</read-default>
+  <write-default>deny</write-default>
+  <exec-default>permit</exec-default>
+  <groups>
+    <group>
+      <name>netconf-admin</name>
+      <user-name>netconf</user-name>
+    </group>
+  </groups>
+  <rule-list>
+    <name>netconf-admin-rules</name>
+    <group>netconf-admin</group>
+    <rule>
+      <name>allow-autonomous-network</name>
+      <module-name>autonomous-network</module-name>
+      <access-operations>*</access-operations>
+      <action>permit</action>
+    </rule>
+  </rule-list>
+</nacm>
